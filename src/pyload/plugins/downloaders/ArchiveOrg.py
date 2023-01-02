@@ -6,10 +6,10 @@ from ..base.simple_downloader import SimpleDownloader
 class ArchiveOrg(SimpleDownloader):
     __name__ = "ArchiveOrg"
     __type__ = "downloader"
-    __version__ = "0.02"
+    __version__ = "0.03"
     __status__ = "testing"
 
-    __pattern__ = r"https?://(?:www\.)?archive\.org/download/.+"
+    __pattern__ = r"https?://(?:www\.)?(ia[\d]{1,8}\.)?([a-z]{1,2}\.)?archive\.org/(download|[0-9]{1,2}/items)/.+"
     __config__ = [
         ("enabled", "bool", "Activated", True),
         ("use_premium", "bool", "Use premium account if available", True),
